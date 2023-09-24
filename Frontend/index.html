@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Attendance Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+      <div class="container-fluid">
+        <form class="row g-3">
+          <div class="col-auto">
+            <a class="navbar-brand" href="#">Select Date</a>
+          </div>
+          <div class="col-auto">
+            <label for="date" class="visually-hidden">Date</label>
+            <input type="date" class="form-control" id="getDate" >
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3" id="searchDate"> Search</button>
+          </div>
+        </form>
+        <button type="submit" class="btn btn-primary mb-3" id="report"> Get Report</button>
+      </div>
+    </nav>
+  </div>
+
+  <br>
+
+  <div class="container w-50" id="studentListForMarking"  style="display: none;">
+    <h4 class="text-center">Mark Attendance</h4>
+    <ul class="list-group" id="studentListForMarkingAtt">
+      
+    </ul>
+    <button type="submit" class="btn btn-primary mb-3" id="markAttendance">Mark Attendance</button>
+  </div>
+
+  <div class="container w-50" id="studentListAfterMarking" style="display: none;">
+    <h4 class="text-center">Attendance Status</h4>
+    <ul class="list-group" id="srudentListAfterMarkingAtt">
+      <!-- <li class="list-group-item">
+        Vinayak
+        <div class="form-check-inline float-end">
+          <span>&#10003;</span>
+          <label class="form-check-label">Present</label>
+        </div>  
+        <div class="form-check form-check-inline float-end">
+          <span>&#10060;</span>
+          <label class="form-check-label">Absent</label>
+        </div>  
+      </li> -->
+    </ul>
+  </div> 
+
+  <div class="container w-50" id="gotReport" style="display: none;">
+    <h4 class="text-center">Attendance report</h4>
+    <ul class="list-group" id="attReportUl">
+      <!-- <li class="list-group-item">
+        Vinayak
+        <div class="float-end">33%</div>    
+      </li> -->
+    </ul>
+  </div>
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
+
+<!-- <li class="list-group-item">
+    <span>Vinayak</span>
+    <form action="" class="form-check form-check-inline float-end">
+      <input type="radio" name="status" id="1absent" value="absent">
+      <label for="1absent">Absent</label>
+      <input type="radio" name="status" id="2present" value="present">
+      <label for="2present">Present</label>
+    </form>
+</li>  -->
