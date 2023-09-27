@@ -12,4 +12,4 @@ app.use(teacherRoutes);
 
 app.listen(2000,()=>{
     console.log('connected to backend')
-});
+})
